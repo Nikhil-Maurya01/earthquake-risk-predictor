@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earthquake Risk Assessor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="header">
+        <h1>EARTHQUAKE RISK ASSESSOR</h1>
+    </div>
+
+    <div class="main-content">
+        
+        <div id="input-card" class="card">
+            <h2>Check Earthquake Risk</h2>
+
+            <div class="input-section">
+                <div class="input-option">
+                    <label for="placeName">Enter Place Name (India Only):</label>
+                    <input type="text" id="placeName" placeholder="e.g., Mumbai, Delhi">
+                </div>
+            </div>
+
+            <div class="button-group">
+                <button id="btn-submit-name" class="btn-primary">Get Risk</button>
+                <button id="btn-get-location" class="btn-secondary">📍 Use My Current Location</button>
+            </div>
+        </div>
+
+        <div id="results-card" class="card hidden">
+            <div id="loading" class="hidden">
+                <div class="spinner"></div>
+                <p>Calculating...</p>
+            </div>
+            
+            <div id="results-content" class="hidden">
+                <h3>Assessment Results</h3>
+                <p><strong>Risk Level:</strong> <span id="result-risk">---</span></p>
+                <p><strong>Predicted Magnitude:</strong> <span id="result-mag">---</span></p>
+            </div>
+            
+            <div id="error-message" class="error hidden"></div>
+
+            <div class="button-group">
+                <button id="btn-go-back" class="btn-secondary">Go Back</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

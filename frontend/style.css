@@ -1,0 +1,201 @@
+body {
+    font-family: 'Poppins', sans-serif; /* Use Poppins font */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+    overflow: hidden; /* Prevent scrolling */
+    background: url('website_bg.png') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+}
+
+/* Header styling */
+.header {
+    width: 100%;
+    background-color: #6d7ee1;
+    color: white;
+    padding: 10px 0; /* Reduced padding */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    flex-shrink: 0; /* Prevent header from shrinking */
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2em; /* Reduced font size */
+    letter-spacing: 1px;
+}
+
+/* Main content area */
+.main-content {
+    flex-grow: 1; /* Take up remaining vertical space */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center the card vertically and horizontally */
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Card styling */
+.card {
+    background-color: rgba(0, 0, 0, 0.7); /* Darker semi-transparent */
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    width: 100%;
+    max-width: 500px; /* Constrain card width */
+    box-sizing: border-box;
+}
+
+.card h2, .card h3 {
+    text-align: center;
+    color: #36b0fc;
+    margin-top: 0;
+    font-size: 1.8em;
+}
+
+/* Input section styling */
+.input-section {
+    margin-bottom: 25px;
+}
+
+.input-option {
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.input-option label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #e0e0e0;
+}
+
+.input-option input[type="text"] {
+    width: 100%; /* Full width */
+    padding: 12px 10px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    font-size: 1em;
+    box-sizing: border-box; /* Include padding in width */
+}
+
+/* Button styling */
+.button-group {
+    display: flex;
+    flex-direction: column; /* Stack buttons */
+    gap: 15px; /* Space between buttons */
+    margin-top: 25px;
+}
+
+button {
+    padding: 12px 20px;
+    font-size: 1.1em;
+    font-weight: 600; /* Bolder font */
+    font-family: 'Poppins', sans-serif; /* Ensure button uses font */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%; /* Full width buttons */
+}
+
+.btn-primary {
+    background-color: #4CAF50;
+    color: white;
+}
+.btn-primary:hover {
+    background-color: #45a049;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-secondary {
+    background-color: #6d7ee1;
+    color: white;
+}
+.btn-secondary:hover {
+    background-color: #1976D2;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Results card styling */
+#results-card {
+    border: 2px solid #6d7ee1;
+}
+
+#results-card h3 {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+#results-card p {
+    font-size: 1.1em;
+    color: #e0e0e0;
+    margin-bottom: 15px;
+}
+
+#results-card p strong {
+    color: #fff;
+}
+
+#results-card p span {
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+    min-width: 70px;
+    text-align: center;
+}
+
+/* Risk level specific colors */
+span#result-risk[style*="d93025"] { /* Red */
+    background-color: rgba(217, 48, 37, 0.2);
+    border: 1px solid #d93025;
+}
+span#result-risk[style*="f29900"] { /* Orange */
+    background-color: rgba(242, 153, 0, 0.2);
+    border: 1px solid #f29900;
+}
+span#result-risk[style*="1a73e8"] { /* Blue */
+    background-color: rgba(26, 115, 232, 0.2);
+    border: 1px solid #1a73e8;
+}
+
+/* Error and Hidden classes */
+.hidden {
+    display: none !important;
+}
+
+.error {
+    color: #d93025;
+    font-weight: 600;
+    margin-top: 15px;
+    text-align: center;
+    background-color: rgba(217, 48, 37, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #d93025;
+}
+
+/* Loading Spinner */
+#loading { text-align: center; padding: 20px; }
+.spinner {
+    border: 4px solid #555;
+    border-top: 4px solid #6d7ee1;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 15px auto;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
