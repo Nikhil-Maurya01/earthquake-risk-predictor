@@ -72,8 +72,6 @@ Users can input a place name or use their browser's current location to instantl
 
 ## 🚀 Local Setup & Installation
 
-To run this project on your local machine, follow these steps:
-
 1.  **Clone the repository:**
     ```bash
     git clone [https://github.com/Nikhil-Maurya01/earthquake-risk-predictor.git](https://github.com/Nikhil-Maurya01/earthquake-risk-predictor.git)
@@ -82,13 +80,13 @@ To run this project on your local machine, follow these steps:
 
 2.  **Create and activate a virtual environment:**
     ```bash
-    # For macOS/Linux
-    python3 -m venv venv
-    source venv/bin/activate
-    
     # For Windows
     python -m venv venv
     .\venv\Scripts\activate
+    
+    # For macOS/Linux
+    # python3 -m venv venv
+    # source venv/bin/activate
     ```
 
 3.  **Train the Models (First-time setup):**
@@ -96,7 +94,7 @@ To run this project on your local machine, follow these steps:
     * Run the training script to generate the `.pkl` and `.json` files:
     ```bash
     pip install pandas scikit-learn
-    python model/train_models.py 
+    python model/train_models.py
     ```
     *(Note: You only need to do this once.)*
 
@@ -113,5 +111,21 @@ To run this project on your local machine, follow these steps:
 
 6.  **Open the app in your browser:**
     Navigate to `http://127.0.0.1:5000`
+
+---
+
+## 📸 Application Demo
+
+Here's a look at the application's user interface.
+
+### Homepage (Input)
+The user is prompted to enter a location in India.
+
+![Application Homepage](assets/homepage.png)
+
+### Output Page (Results)
+After a successful query, the app hides the input form and displays the predicted risk level and magnitude.
+
+![Application Output](assets/output.png)
 
 ---
